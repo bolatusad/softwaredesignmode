@@ -5,12 +5,12 @@ package zt.mode.factory;
  * 2019/4/6 18:30
  * Description:
  */
-public class AbstractFactoryTest {
+public class FactoryMethodTest {
 
     public static void main(String[] args) {
 
-        AbstractFactory appleFactory = new AppleFactory();
-        AbstractFactory orangeFactory = new OrangeFactory();
+        FactoryMethod appleFactory = new AppleFactory();
+        FactoryMethod orangeFactory = new OrangeFactory();
         Product apple = appleFactory.newProduct();
         Product orange = orangeFactory.newProduct();
         apple.show();
@@ -24,7 +24,7 @@ public class AbstractFactoryTest {
 /**
  * 抽象工厂方法
  */
-interface AbstractFactory{
+interface FactoryMethod {
     Product newProduct();
 }
 
@@ -38,7 +38,7 @@ interface Product{
 /**
  * 抽象工厂的具体实现
  */
-class AppleFactory implements AbstractFactory{
+class AppleFactory implements FactoryMethod {
 
     @Override
     public Product newProduct() {
@@ -49,7 +49,7 @@ class AppleFactory implements AbstractFactory{
 /**
  * 抽象工厂的具体实现
  */
-class OrangeFactory implements AbstractFactory{
+class OrangeFactory implements FactoryMethod {
 
     @Override
     public Product newProduct() {

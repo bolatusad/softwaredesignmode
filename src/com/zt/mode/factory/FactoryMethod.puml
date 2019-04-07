@@ -1,0 +1,19 @@
+@startuml
+
+interface Product{
+    void show();
+}
+
+interface FactoryMethod{
+    Product newProduct();
+}
+
+class AppleProduct{
+      void show(){};
+}
+
+class OrangeProduct{
+      void show(){};
+}
+
+@enduml
